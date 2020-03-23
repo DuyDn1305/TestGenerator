@@ -9,7 +9,7 @@ public class Main {
         String name = "problemD"; // the name of problem
         String path = "./"; // The whole testcase for the problem will
                             //be store directly in this folder
-        int numberTest = 20; // number of testcase
+        int numberTest = 5; // number of testcase
         // asign new generator
         InputGenerator A = new InputGenerator(path, name, numberTest);
         Generator G = new Generator();
@@ -24,18 +24,18 @@ public class Main {
                 
                 
                 // write an upper character and lower one
-                f.write(""+G.nextAlphabet(true)+G.nextAlphabet(false)+'\n');
+                //f.write(""+G.nextAlphabet(true)+G.nextAlphabet(false)+'\n');
                 // generate an array of n permutation
                 // NOTE THAT FIRST INDEX IS 0
-                int n = 16;
+                int n = 17;
                 int[] p = G.nextPermutationArray(n);
                 for (int j = 0; j < n; ++j) {
                     f.write(p[j]+" ");
                 }
-                f.write('/');
+                f.write('\n');
                 // generate a uniform-distribution array
                 n = 10;
-                int[] a = G.nextIntArray(n);
+                long[] a = G.nextLongArray(n);
                 for (int j = 0; j < n; ++j) {
                     f.write(a[j]+" ");
                 }

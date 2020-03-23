@@ -34,15 +34,15 @@ public class InputGenerator {
     
     public void setup() {
         // create folder for input place holder
-        if (newDir(path+"//Testcases"));
-        if (newDir(path+"//Testcases//"+name));
+        if (newDir(path+"/Testcases"));
+        if (newDir(path+"/Testcases/"+name));
         // create folder for tests
         boolean check = true;
         int len = Integer.toString(numberTest).length();
         for (int i = 1; i <= numberTest; ++i) {
             String id = Integer.toString(i);
             while (id.length() < len) id = "0"+id;
-            if (newDir(path+"Testcases//"+name+"//test"+id));
+            if (newDir(path+"Testcases/"+name+"/test"+id));
             else {
                 check = false;
                 break;
@@ -59,7 +59,7 @@ public class InputGenerator {
         for (int i = 1; i <= numberTest; ++i) {
             String id = Integer.toString(i);
             while (id.length() < len) id = "0"+id;
-            String testPath = path+"Testcases//"+name+"//test"+id+"//";
+            String testPath = path+"Testcases/"+name+"/test"+id+"/";
             String testName = name+".inp";
             createFile(testPath, testName);
             
